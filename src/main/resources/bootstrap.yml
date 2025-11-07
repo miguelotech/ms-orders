@@ -1,0 +1,15 @@
+server:
+  port: 8082
+
+ms-productos:
+  url: "http://ms-product:8081"
+
+spring:
+
+  application:
+    name: ms-orders
+
+  config:
+    # import: optional:configserver:http://root:s3cr3t@localhost:8888
+    # ⚠️ Si estás usando Docker:
+    import: optional:configserver:http://root:s3cr3t@ms-config-server:8888
